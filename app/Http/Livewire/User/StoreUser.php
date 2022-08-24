@@ -37,11 +37,6 @@ class StoreUser extends Component
         'passport_photo' => 'required',
     ];
 
-    public function render()
-    {
-        return view('livewire.user.store-user');
-    }
-
     public function storeUser()
     {
         $this->validate();
@@ -88,5 +83,10 @@ class StoreUser extends Component
         $this->name = '';
         $this->email = '';
         $this->password = '';
+    }
+
+    public function render()
+    {
+        return view('livewire.user.store-user');
     }
 }

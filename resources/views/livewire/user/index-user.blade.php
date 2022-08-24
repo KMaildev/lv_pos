@@ -21,6 +21,15 @@
         </div>
     </div>
 
+    <div class="input-group mb-4">
+        <div class="flex-fill position-relative">
+            <div class="input-group">
+                <input type="text" class="form-control text-white bg-secondary" placeholder="Search"
+                    wire:model="searchTerm" />
+            </div>
+        </div>
+    </div>
+
     <table class="table table-bordered table-hover">
         <thead>
             <tr class="" style="background-color:#03184a;">
@@ -78,15 +87,10 @@
                         {{ $user->phone ?? '' }}
                     </td>
 
-                    <td>
+                    <td style="text-align: center">
                         @if ($user->passport_photo)
-                            <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
-                                <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top"
-                                    class="avatar avatar-xs pull-up" title="" data-bs-original-title="">
-                                    <img src="{{ Storage::url($user->passport_photo) }}" alt="Avatar"
-                                        class="rounded-circle">
-                                </li>
-                            </ul>
+                            <img src="{{ Storage::url($user->passport_photo) }}" alt="" width="30"
+                                class="rounded-circle">
                         @endif
                     </td>
                     <td>
@@ -117,9 +121,9 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="dropdown-item" href="#">
+                                        <button wire:click="delete({{ $user->id }})" class="dropdown-item">
                                             Delete
-                                        </a>
+                                        </button>
                                     </li>
                                 </ul>
                             </div>
@@ -129,6 +133,4 @@
             @endforeach
         </tbody>
     </table>
-
-
 </div>

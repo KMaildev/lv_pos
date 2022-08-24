@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
-    <livewire:styles />
+    @livewireStyles
 </head>
 
 <body style="background-color: #a2c6eb !important">

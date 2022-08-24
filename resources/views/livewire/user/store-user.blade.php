@@ -1,12 +1,12 @@
 <div>
     <div class="row">
-        <div class="col-xl-12 mx-auto">
+        <div class="col-xl-12 mx-auto" style="background-color: white; color: black">
             <h6 class="mb-0 text-uppercase">
                 Create
             </h6>
             <hr />
             <div class="card border-top border-0 border-4 border-info">
-                <form wire:submit.prevent="storeUser" enctype="multipart/form-data" wire:ignore.self>
+                <form wire:submit.prevent="storeUser" enctype="multipart/form-data">
                     <div class="card-body">
                         <div class="border p-4 rounded">
                             <div class="card-title d-flex align-items-center">
@@ -17,13 +17,13 @@
                                 </h5>
                             </div>
                             <hr />
-
+                            <br>
                             <div class="row mb-3">
                                 <label for="inputEnterYourName" class="col-sm-3 col-form-label">
                                     Employee ID
                                 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" wire:model="employee_id"
+                                    <input type="text" class="form-control text-black" wire:model="employee_id"
                                         id="employee_id">
                                     @error('employee_id')
                                         <span class="text-danger">{{ $message }}</span>
@@ -36,7 +36,8 @@
                                     Name
                                 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" wire:model="name" id="name">
+                                    <input type="text" class="form-control text-black" wire:model="name"
+                                        id="name">
                                     @error('name')
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -48,7 +49,8 @@
                                     Email
                                 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" wire:model="email" id="email">
+                                    <input type="text" class="form-control text-black" wire:model="email"
+                                        id="email">
                                     @error('email')
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -60,7 +62,8 @@
                                     Phone
                                 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" wire:model="phone" id="phone">
+                                    <input type="text" class="form-control text-black" wire:model="phone"
+                                        id="phone">
                                     @error('phone')
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -72,7 +75,7 @@
                                     Passport Photo
                                 </label>
                                 <div class="col-sm-9">
-                                    <input type="file" class="form-control" wire:model="passport_photo"
+                                    <input type="file" class="form-control bg-secondary" wire:model="passport_photo"
                                         id="passport_photo">
                                     @error('passport_photo')
                                         <span class="text-danger">{{ $message }}</span>
@@ -85,7 +88,8 @@
                                     NRC Number
                                 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" wire:model="nrc_number" id="nrc_number">
+                                    <input type="text" class="form-control text-black" wire:model="nrc_number"
+                                        id="nrc_number">
                                     @error('nrc_number')
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -97,7 +101,7 @@
                                     NRC Front Photo
                                 </label>
                                 <div class="col-sm-9">
-                                    <input type="file" class="form-control" wire:model="nrc_front_photo"
+                                    <input type="file" class="form-control bg-secondary" wire:model="nrc_front_photo"
                                         id="nrc_front_photo">
                                     @error('nrc_front_photo')
                                         <span class="text-danger">{{ $message }}</span>
@@ -110,7 +114,7 @@
                                     NRC Back Photo
                                 </label>
                                 <div class="col-sm-9">
-                                    <input type="file" class="form-control" wire:model="nrc_back_photo"
+                                    <input type="file" class="form-control bg-secondary" wire:model="nrc_back_photo"
                                         id="nrc_back_photo">
                                     @error('nrc_back_photo')
                                         <span class="text-danger">{{ $message }}</span>
@@ -123,8 +127,8 @@
                                     Household Member List
                                 </label>
                                 <div class="col-sm-9">
-                                    <input type="file" class="form-control" wire:model="household_member_list"
-                                        id="household_member_list">
+                                    <input type="file" class="form-control bg-secondary"
+                                        wire:model="household_member_list" id="household_member_list">
                                     @error('household_member_list')
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -136,8 +140,8 @@
                                     Gender
                                 </label>
                                 <div class="col-sm-9">
-                                    <select id="inputState" class="form-select" wire:model.debounce.800ms="gender"
-                                        id="gender">
+                                    <select class="form-control text-white bg-secondary"
+                                        wire:model.debounce.800ms="gender" id="gender">
                                         <option value="">
                                             Select Gender
                                         </option>
@@ -159,7 +163,8 @@
                                     Address
                                 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" wire:model="address" id="address">
+                                    <input type="text" class="form-control text-black" wire:model="address"
+                                        id="address">
                                     @error('address')
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -171,7 +176,7 @@
                                     Department
                                 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" wire:model="department_id"
+                                    <input type="text" class="form-control text-black" wire:model="department_id"
                                         id="department_id">
                                     @error('department_id')
                                         <span class="text-danger">{{ $message }}</span>
@@ -184,7 +189,8 @@
                                     Role
                                 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" wire:model="role_id" id="role_id">
+                                    <input type="text" class="form-control text-black" wire:model="role_id"
+                                        id="role_id">
                                     @error('role_id')
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -197,7 +203,7 @@
                                 </label>
 
                                 <div class="col-sm-9">
-                                    <select id="inputState" class="form-select"
+                                    <select class="form-control text-white bg-secondary"
                                         wire:model.debounce.800ms="employment_type" id="employment_type">
                                         <option value="">
                                             Select Employment Type
@@ -221,7 +227,7 @@
                                     Join Date
                                 </label>
                                 <div class="col-sm-9">
-                                    <input type="datetime-local" class="form-control date_picker"
+                                    <input type="datetime-local" class="form-control text-black date_picker"
                                         wire:model="join_date" id="join_date">
                                     @error('join_date')
                                         <span class="text-danger">{{ $message }}</span>
@@ -234,8 +240,8 @@
                                     Emergency Contact Person
                                 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" wire:model="emergency_contact_person"
-                                        id="emergency_contact_person">
+                                    <input type="text" class="form-control text-black"
+                                        wire:model="emergency_contact_person" id="emergency_contact_person">
                                     @error('emergency_contact_person')
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -247,8 +253,8 @@
                                     Emergency Contact Number
                                 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" wire:model="emergency_contact_number"
-                                        id="emergency_contact_number">
+                                    <input type="text" class="form-control text-black"
+                                        wire:model="emergency_contact_number" id="emergency_contact_number">
                                     @error('emergency_contact_number')
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
@@ -260,14 +266,13 @@
                                     Password
                                 </label>
                                 <div class="col-sm-9">
-                                    <input type="password" class="form-control" wire:model="password"
+                                    <input type="password" class="form-control text-black" wire:model="password"
                                         id="password">
                                     @error('password')
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
                             </div>
-
 
                             <div class="row">
                                 <label class="col-sm-3 col-form-label"></label>

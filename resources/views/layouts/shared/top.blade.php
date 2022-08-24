@@ -22,11 +22,11 @@
         <a href="#" class="brand-logo">
             <span class="brand-img">
                 <span class="brand-img-text " style="color:#ffb100;">
-                    P
+                    L
                 </span>
             </span>
             <span class="brand-text">
-                POS
+                LVA
             </span>
         </a>
     </div>

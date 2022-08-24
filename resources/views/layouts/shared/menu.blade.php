@@ -2,49 +2,190 @@
     <div class="app-sidebar-content" data-scrollbar="true" data-height="100%">
 
         <div class="menu">
-            <div class="menu-header">Navigation</div>
+            <div class="menu-header text-white">
+                Main
+            </div>
             <div class="menu-item active">
                 <a href="{{ route('dashboard') }}" class="menu-link">
                     <span class="menu-icon">
                         <i class="bi bi-cpu" style="color:#ffb100;"></i>
                     </span>
-                    <span class="menu-text" style="color:#03184a;font-weight:bold;">
+                    <span class="menu-text text-white">
                         Dashboard
                     </span>
                 </a>
             </div>
 
+
             <div class="menu-divider"></div>
-            <div class="menu-header" style="color:black;">Users</div>
+            <div class="menu-header text-white">
+                POS System
+            </div>
+            <div class="menu-item">
+                <a href="{{ route('indexuser') }}" class="menu-link">
+                    <span class="menu-icon">
+                        <i class="fas fa-check"></i>
+                    </span>
+                    <span class="menu-text text-white">
+                        Customer Order
+                    </span>
+                </a>
+            </div>
+
+            <div class="menu-item">
+                <a href="#" class="menu-link">
+                    <span class="menu-icon">
+                        <i class="fas fa-users"></i>
+                    </span>
+                    <span class="menu-text text-white">
+                        Counter Checkout
+                    </span>
+                </a>
+            </div>
+
+            <div class="menu-item">
+                <a href="#" class="menu-link">
+                    <span class="menu-icon">
+                        <i class="fas fa-credit-card"></i>
+                    </span>
+                    <span class="menu-text text-white">
+                        Payment Types
+                    </span>
+                </a>
+            </div>
+
+
+
+            <div class="menu-divider"></div>
+            <div class="menu-header text-white">
+                Menu
+            </div>
+            <div class="menu-item">
+                <a href="{{ route('indexuser') }}" class="menu-link">
+                    <span class="menu-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </span>
+                    <span class="menu-text text-white">
+                        Main Group
+                    </span>
+                </a>
+            </div>
+
+            <div class="menu-item">
+                <a href="#" class="menu-link">
+                    <span class="menu-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </span>
+                    <span class="menu-text text-white">
+                        Main Category
+                    </span>
+                </a>
+            </div>
+
+
+            <div class="menu-item">
+                <a href="#" class="menu-link">
+                    <span class="menu-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </span>
+                    <span class="menu-text text-white">
+                        Sub Group
+                    </span>
+                </a>
+            </div>
+
+            <div class="menu-item">
+                <a href="{{ route('index_ingredients') }}" class="menu-link">
+                    <span class="menu-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </span>
+                    <span class="menu-text text-white">
+                        Ingredients
+                    </span>
+                </a>
+            </div>
+
+            <div class="menu-divider"></div>
+            <div class="menu-header text-white">
+                Reports
+            </div>
+            <div class="menu-item">
+                <a href="{{ route('indexuser') }}" class="menu-link">
+                    <span class="menu-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </span>
+                    <span class="menu-text text-white">
+                        Sales Report
+                    </span>
+                </a>
+            </div>
+
+            <div class="menu-item">
+                <a href="#" class="menu-link">
+                    <span class="menu-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </span>
+                    <span class="menu-text text-white">
+                        Stock Report
+                    </span>
+                </a>
+            </div>
+
+            <div class="menu-item">
+                <a href="#" class="menu-link">
+                    <span class="menu-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </span>
+                    <span class="menu-text text-white">
+                        Sold Stock
+                    </span>
+                </a>
+            </div>
+
+            <div class="menu-item">
+                <a href="#" class="menu-link">
+                    <span class="menu-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </span>
+                    <span class="menu-text text-white">
+                        Profit Report
+                    </span>
+                </a>
+            </div>
+
+            <div class="menu-item">
+                <a href="#" class="menu-link">
+                    <span class="menu-icon">
+                        <i class="fas fa-history"></i>
+                    </span>
+                    <span class="menu-text text-white">
+                        Order History
+                    </span>
+                </a>
+            </div>
+
+            <div class="menu-divider"></div>
+            <div class="menu-header text-white">Users</div>
             <div class="menu-item">
                 <a href="{{ route('indexuser') }}" class="menu-link">
                     <span class="menu-icon">
                         <i class="bi bi-people"></i>
                     </span>
-                    <span class="menu-text" style="color:black;">
+                    <span class="menu-text text-white">
                         Users
                     </span>
                 </a>
             </div>
 
             <div class="menu-item">
-                <a href="calendar.html" class="menu-link">
-                    <span class="menu-icon"><i class="bi bi-calendar4"></i></span>
-                    <span class="menu-text" style="color:black;">Calendar</span>
+                <a href="#" class="menu-link">
+                    <span class="menu-icon">
+                        <i class="bi bi-gear"></i>
+                    </span>
+                    <span class="menu-text text-white">Settings</span>
                 </a>
             </div>
-            <div class="menu-item">
-                <a href="settings.html" class="menu-link">
-                    <span class="menu-icon"><i class="bi bi-gear"></i></span>
-                    <span class="menu-text" style="color:black;">Settings</span>
-                </a>
-            </div>
-            <div class="menu-item">
-                <a href="helper.html" class="menu-link">
-                    <span class="menu-icon"><i class="bi bi-gem"></i></span>
-                    <span class="menu-text" style="color:black;">Helper</span>
-                </a>
-            </div>
+
         </div>
     </div>
 

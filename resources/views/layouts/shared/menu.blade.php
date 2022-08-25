@@ -105,6 +105,17 @@
                 </a>
             </div>
 
+            <div class="menu-item">
+                <a href="{{ route('index_traditional') }}" class="menu-link">
+                    <span class="menu-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </span>
+                    <span class="menu-text text-white">
+                        Traditional Food
+                    </span>
+                </a>
+            </div>
+
             <div class="menu-divider"></div>
             <div class="menu-header text-white">
                 Reports

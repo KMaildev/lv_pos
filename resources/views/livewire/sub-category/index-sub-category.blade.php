@@ -4,7 +4,7 @@
             <h1 class="page-header mb-0">Sub Category</h1>
         </div>
         <div class="ms-auto">
-            <a href="{{ route('store_main_category') }}" class="btn btn-outline-theme btn-color">
+            <a href="{{ route('store_sub_category') }}" class="btn btn-outline-theme btn-color">
                 <i class="fa fa-plus-circle fa-fw me-1"></i>
                 Create
             </a>
@@ -14,53 +14,29 @@
     <div class="row">
         <div id="app" class="app app-content-full-height app-without-sidebar app-without-header">
             <div id="content" class="app-content p-1 pe-xl-4 pt-xl-3 pb-xl-3">
+                <div class="col-md-12 d-flex flex-row-reverse">
+                    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="top" data-bs-content="Top popover">
+                        Burmese Food
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="right" data-bs-content="Right popover">
+                        Japanese Food
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="bottom" data-bs-content="Bottom popover">
+                        Korean Food
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover"
+                        data-bs-placement="left" data-bs-content="Left popover">
+                        Chinese Food
+                    </button>
+                </div>
+                <br>
                 <div class="pos card" id="pos">
-     
-
                     <div class="pos-container card-body">
-                        <div class="pos-sidebar" id="pos-sidebar">
-                            <div class="h-100 d-flex flex-column p-0">
-                                <div class="pos-sidebar-header">
-                                    <div class="title">
-                                        Menu List
-                                    </div>
-                                </div>
-                                <div class="pos-sidebar-body tab-content" data-scrollbar="true" data-height="100%">
-                                    <div class="tab-pane fade h-100 show active" id="newOrderTab">
-                                        @foreach ($categories as $categorie)
-                                            <div class="accordion" id="accordionExample">
-                                                <div class="accordion-item">
 
-                                                    <h3 class="accordion-header">
-                                                        <button class="accordion-button collapsed" type="button"
-                                                            data-bs-toggle="collapse"
-                                                            data-bs-target="#MenuId_{{ $categorie->id }}"
-                                                            aria-expanded="false"
-                                                            aria-controls="MenuId_{{ $categorie->id }}">
-                                                            {{ $categorie->title ?? '' }}
-                                                        </button>
-                                                    </h3>
-
-                                                    <div id="MenuId_{{ $categorie->id }}"
-                                                        class="accordion-collapse collapse"
-                                                        aria-labelledby="panelsStayOpen-headingOne">
-                                                        <div class="list-group" style="background-color: white">
-                                                            @foreach ($categorie->main_categories_table as $main_categorie)
-                                                                <a href="#"
-                                                                    class="list-group-item list-group-item-action active">
-                                                                    {{ $main_categorie->title ?? '' }}
-                                                                </a>
-                                                                <hr>
-                                                            @endforeach
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        @endforeach
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @include('livewire.sub-category.shared.menu_lists')
 
                         <div class="pos-content">
                             <div class="pos-content-container h-100 p-4" data-scrollbar="true" data-height="100%">
@@ -116,6 +92,7 @@
                                 </div>
                             </div>
                         </div>
+
 
                     </div>
                 </div>

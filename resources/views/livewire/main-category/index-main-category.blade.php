@@ -32,16 +32,16 @@
                     #
                 </th>
                 <th style="width: 10%;">
-                    Category
-                </th>
-                <th style="width: 10%;">
-                    Type
-                </th>
-                <th style="width: 10%;">
                     Title
                 </th>
                 <th style="width: 10%;">
                     Unit
+                </th>
+                <th style="width: 10%;">
+                    Category
+                </th>
+                <th style="width: 10%;">
+                    Type
                 </th>
                 <th style="width: 10%;">
                     Actions
@@ -56,19 +56,19 @@
                     </td>
 
                     <td>
-                        {{ $main_categorie->categories_table->title ?? '' }}
-                    </td>
-
-                    <td>
-                        {{ Str::upper($main_categorie->categories_table->type ?? '') }}
-                    </td>
-
-                    <td>
                         {{ $main_categorie->title ?? '' }}
                     </td>
 
                     <td>
                         {{ $main_categorie->unit ?? '' }}
+                    </td>
+
+                    <td>
+                        {{ $main_categorie->categories_table->title ?? '' }}
+                    </td>
+
+                    <td>
+                        {{ Str::upper($main_categorie->categories_table->type ?? '') }}
                     </td>
 
                     <td>

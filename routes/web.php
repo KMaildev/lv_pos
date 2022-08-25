@@ -8,9 +8,11 @@ use App\Http\Livewire\Ingredients\StoreIngredients;
 use App\Http\Livewire\MainCategory\IndexMainCategory;
 use App\Http\Livewire\MainCategory\StoreMainCategory;
 use App\Http\Livewire\SubCategory\IndexSubCategory;
+use App\Http\Livewire\SubCategory\StoreSubCategory;
+use App\Http\Livewire\Traditional\IndexTraditional;
+use App\Http\Livewire\Traditional\StoreTraditional;
 use App\Http\Livewire\User\IndexUser;
 use App\Http\Livewire\User\StoreUser;
-use App\Models\Models\MainCategory;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -28,6 +30,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/main-category', IndexMainCategory::class)->name('index_main_category');
     Route::get('/store-main-category', StoreMainCategory::class)->name('store_main_category');
     Route::get('/sub-category', IndexSubCategory::class)->name('index_sub_category');
+    Route::get('/store-sub-category', StoreSubCategory::class)->name('store_sub_category');
+    Route::get('/index-traditional', IndexTraditional::class)->name('index_traditional');
+    Route::get('/store-traditional', StoreTraditional::class)->name('store_traditional');
 });
 
 require __DIR__ . '/auth.php';

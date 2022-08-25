@@ -22,7 +22,7 @@
                 POS System
             </div>
             <div class="menu-item">
-                <a href="{{ route('indexuser') }}" class="menu-link">
+                <a href="#" class="menu-link">
                     <span class="menu-icon">
                         <i class="fas fa-check"></i>
                     </span>
@@ -50,6 +50,17 @@
                     </span>
                     <span class="menu-text text-white">
                         Payment Types
+                    </span>
+                </a>
+            </div>
+
+            <div class="menu-item">
+                <a href="{{ route('index_table_list') }}" class="menu-link">
+                    <span class="menu-icon">
+                        <i class="fas fa-table"></i>
+                    </span>
+                    <span class="menu-text text-white">
+                        Table
                     </span>
                 </a>
             </div>
@@ -121,7 +132,7 @@
                 Reports
             </div>
             <div class="menu-item">
-                <a href="{{ route('indexuser') }}" class="menu-link">
+                <a href="#" class="menu-link">
                     <span class="menu-icon">
                         <i class="fas fa-chart-bar"></i>
                     </span>
@@ -156,17 +167,6 @@
             <div class="menu-item">
                 <a href="#" class="menu-link">
                     <span class="menu-icon">
-                        <i class="fas fa-chart-bar"></i>
-                    </span>
-                    <span class="menu-text text-white">
-                        Profit Report
-                    </span>
-                </a>
-            </div>
-
-            <div class="menu-item">
-                <a href="#" class="menu-link">
-                    <span class="menu-icon">
                         <i class="fas fa-history"></i>
                     </span>
                     <span class="menu-text text-white">
@@ -187,6 +187,25 @@
                     </span>
                 </a>
             </div>
+
+            <div class="menu-item">
+                <a href="#" class="menu-link">
+                    <span class="menu-icon">
+                        <i class="bi bi-gear"></i>
+                    </span>
+                    <span class="menu-text text-white">Role</span>
+                </a>
+            </div>
+
+            <div class="menu-item">
+                <a href="#" class="menu-link">
+                    <span class="menu-icon">
+                        <i class="bi bi-gear"></i>
+                    </span>
+                    <span class="menu-text text-white">Permission</span>
+                </a>
+            </div>
+
 
             <div class="menu-item">
                 <a href="#" class="menu-link">

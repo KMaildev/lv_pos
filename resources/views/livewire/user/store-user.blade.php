@@ -176,8 +176,18 @@
                                     Department
                                 </label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control text-black" wire:model="department_id"
-                                        id="department_id">
+                                    <select class="form-control text-white bg-secondary"
+                                        wire:model.debounce.800ms="department_id" id="department_id">
+                                        <option value="">
+                                            Select Department
+                                        </option>
+                                        <option value="1">
+                                            Admin
+                                        </option>
+                                        <option value="2">
+                                            Waiter
+                                        </option>
+                                    </select>
                                     @error('department_id')
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror

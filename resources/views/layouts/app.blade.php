@@ -20,7 +20,15 @@
 
     <div id="app" class="app">
         @include('layouts.shared.top')
-        @include('layouts.shared.menu')
+
+        @php
+            $department_id = auth()->user()->department_id ?? 0;
+        @endphp
+        @if ($department_id == 1)
+            @include('layouts.shared.menu')
+        @else
+            @include('layouts.shared.waiter_menu')
+        @endif
 
         <button class="app-sidebar-mobile-backdrop" data-toggle-target=".app"
             data-toggle-class="app-sidebar-mobile-toggled">
@@ -28,6 +36,7 @@
 
         <div id="content" class="app-content">
             {{ $slot }}
+
         </div>
     </div>
 

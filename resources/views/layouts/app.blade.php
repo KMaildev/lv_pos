@@ -35,6 +35,9 @@
     <script type="module">
         import hotwiredTurbo from 'https://cdn.skypack.dev/@hotwired/turbo';
     </script>
+    <script src="https://cdn.jsdelivr.net/gh/livewire/turbolinks@v0.1.x/dist/livewire-turbolinks.js"
+        data-turbolinks-eval="false" data-turbo-eval="false"></script>
+
 
     <script data-cfasync="false" src="{{ asset('assets/js/email-decode.min.js') }}"></script>
     <script src="{{ asset('assets/js/vendor.min.js') }}" type="ceb4422f9821046177ad8e21-text/javascript"></script>

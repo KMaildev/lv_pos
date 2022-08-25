@@ -1,4 +1,4 @@
-<div>
+<div wire:key="index_user">
 
     <div class="d-flex align-items-center mb-3">
         <div>
@@ -107,27 +107,12 @@
                     </td>
 
                     <td>
-                        <div class="btn-group" role="group" aria-label="Button group with nested dropdown"
-                            wire:ignore.self>
-                            <div class="btn-group" role="group">
-                                <button type="button" class="btn btn-primary btn-sm dropdown-toggle btn-color"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Action
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a class="dropdown-item" href="#">
-                                            Edit
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <button wire:click="delete({{ $user->id }})" class="dropdown-item">
-                                            Delete
-                                        </button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        <a href="#" class="btn btn-theme btn-sm">
+                            Edit
+                        </a>
+                        <button wire:click="delete({{ $user->id }})" class="btn btn-danger btn-sm">
+                            Delete
+                        </button>
                     </td>
                 </tr>
             @endforeach

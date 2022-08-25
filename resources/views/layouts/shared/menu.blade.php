@@ -60,19 +60,20 @@
             <div class="menu-header text-white">
                 Menu
             </div>
+
             <div class="menu-item">
-                <a href="{{ route('indexuser') }}" class="menu-link">
+                <a href="{{ route('index_category') }}" class="menu-link">
                     <span class="menu-icon">
                         <i class="fas fa-chart-bar"></i>
                     </span>
                     <span class="menu-text text-white">
-                        Main Group
+                        Category
                     </span>
                 </a>
             </div>
 
             <div class="menu-item">
-                <a href="#" class="menu-link">
+                <a href="{{ route('indexuser') }}" class="menu-link">
                     <span class="menu-icon">
                         <i class="fas fa-chart-bar"></i>
                     </span>
@@ -82,14 +83,13 @@
                 </a>
             </div>
 
-
             <div class="menu-item">
                 <a href="#" class="menu-link">
                     <span class="menu-icon">
                         <i class="fas fa-chart-bar"></i>
                     </span>
                     <span class="menu-text text-white">
-                        Sub Group
+                        Sub Category
                     </span>
                 </a>
             </div>

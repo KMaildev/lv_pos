@@ -1,4 +1,4 @@
-<div>
+<div wire:ignore.self wire:key="store_user">
     <div class="row">
         <div class="col-xl-12 mx-auto" style="background-color: white; color: black">
             <h6 class="mb-0 text-uppercase">

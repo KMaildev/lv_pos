@@ -1,4 +1,4 @@
-<div>
+<div wire:ignore.self wire:key="index_ingred">
     <div class="d-flex align-items-center mb-3">
         <div>
             <h1 class="page-header mb-0">Ingredients</h1>

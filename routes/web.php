@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Livewire\Category\IndexCategory;
+use App\Http\Livewire\Category\StoreCategory;
 use App\Http\Livewire\Dashboard;
 use App\Http\Livewire\Ingredients\IndexIngredients;
 use App\Http\Livewire\Ingredients\StoreIngredients;
@@ -18,6 +20,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/storeuser', StoreUser::class)->name('store_user');
     Route::get('/index-ingredients', IndexIngredients::class)->name('index_ingredients');
     Route::get('/store-ingredients', StoreIngredients::class)->name('store_ingredients');
+    Route::get('/index-category', IndexCategory::class)->name('index_category');
+    Route::get('/store-category', StoreCategory::class)->name('store_category');
 });
 
 require __DIR__ . '/auth.php';

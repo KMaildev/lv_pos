@@ -1,14 +1,14 @@
-<div wire:ignore.self wire:key="store_ingredients">
+<div wire:ignore.self wire:key="store_category">
     <div class="row">
         <div class="col-xl-12 mx-auto" style="background-color: white; color: black">
-            <form wire:submit.prevent="storeUser" enctype="multipart/form-data">
+            <form wire:submit.prevent="storeCategory" enctype="multipart/form-data">
                 <div class="card-body">
                     <div class="border p-4 rounded">
                         <div class="card-title d-flex align-items-center">
                             <div><i class="bx bxs-user me-1 font-22 text-info"></i>
                             </div>
                             <h5 class="mb-0 text-info">
-                                Create a new ingredient
+                                Create
                             </h5>
                         </div>
                         <hr />
@@ -28,24 +28,22 @@
 
                         <div class="row mb-3">
                             <label for="inputEnterYourName" class="col-sm-3 col-form-label">
-                                Unit
+                                Type
                             </label>
                             <div class="col-sm-9">
-                                <input type="text" class="form-control text-black" wire:model="unit" id="unit">
-                                @error('unit')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="inputEnterYourName" class="col-sm-3 col-form-label">
-                                Ingredient Photo
-                            </label>
-                            <div class="col-sm-9">
-                                <input type="file" class="form-control bg-secondary" wire:model="photo"
-                                    id="photo">
-                                @error('photo')
+                                <select class="form-control text-white bg-secondary" wire:model.debounce.800ms="type"
+                                    id="type">
+                                    <option value="">
+                                        Select Type
+                                    </option>
+                                    <option value="food">
+                                        Food
+                                    </option>
+                                    <option value="bar">
+                                        Bar
+                                    </option>
+                                </select>
+                                @error('type')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>

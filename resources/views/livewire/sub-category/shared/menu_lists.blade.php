@@ -1,7 +1,7 @@
 <div class="pos-sidebar" id="pos-sidebar">
     <div class="h-100 d-flex flex-column p-0">
         <div class="pos-sidebar-header">
-            <div class="title">
+            <div class="title text-black">
                 Menu List
             </div>
         </div>
@@ -19,13 +19,14 @@
                                 </button>
                             </h3>
 
-                            <div id="MenuId_{{ $categorie->id }}" class="accordion-collapse collapse"
+                            <div id="MenuId_{{ $categorie->id }}" class="accordion-collapse collapse show"
                                 aria-labelledby="panelsStayOpen-headingOne">
                                 <div class="list-group" style="background-color: white">
                                     @foreach ($categorie->main_categories_table as $main_categorie)
-                                        <a href="#" class="list-group-item list-group-item-action active">
+                                        <button wire:click="searchMainCategory({{ $main_categorie->id }})"
+                                            type="button" class="list-group-item list-group-item-action active">
                                             {{ $main_categorie->title ?? '' }}
-                                        </a>
+                                        </button>
                                         <hr>
                                     @endforeach
                                 </div>

@@ -27,9 +27,9 @@
                                 Food
                             </a>
                             @foreach ($foods as $food)
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <li class="list-group-item d-flex justify-content-between align-items-center" style="color:black;">
                                     {{ $food->title ?? '' }}
-                                    <span class="badge bg-primary">
+                                    <span class="badge bg-primary" >
                                         <a href="javascript:void(0);">
                                             <i class="fa fa-edit"></i>
                                             Edit
@@ -52,7 +52,7 @@
                                 Bar
                             </a>
                             @foreach ($bars as $bar)
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <li class="list-group-item d-flex justify-content-between align-items-center" style="color:black;">
                                     {{ $bar->title ?? '' }}
                                     <span class="badge bg-primary">
                                         <a href="javascript:void(0);">

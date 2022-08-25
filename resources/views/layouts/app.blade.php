@@ -44,8 +44,26 @@
     <script src="{{ asset('assets/js/app.min.js') }}" type="ceb4422f9821046177ad8e21-text/javascript"></script>
     <script src="{{ asset('assets/plugins/jvectormap-next/jquery-jvectormap.min.js') }}" type="ceb4422f9821046177ad8e21-text/javascript"></script>
     <script src="{{ asset('assets/plugins/jvectormap-content/world-mill.js') }}" type="ceb4422f9821046177ad8e21-text/javascript"></script>
-    <script src="{{ asset('assets/js/rocket-loader.min.js') }}" data-cf-settings="ceb4422f9821046177ad8e21-|49"></script>
     <script src="{{ asset('assets/js/demo/pos-menu-stock.demo.html') }}" type="d1c37820e0c12094c32f624e-text/javascript"></script>
+
+    {{-- <script src="{{ asset('assets/plugins/apexcharts/dist/apexcharts.min.js') }}" type="ceb4422f9821046177ad8e21-text/javascript"></script>
+    <script src="{{ asset('assets/js/demo/dashboard.demo.js') }}" type="ceb4422f9821046177ad8e21-text/javascript"></script> --}}
+
+    <script src="{{ asset('assets/js/rocket-loader.min.js') }}" data-cf-settings="ceb4422f9821046177ad8e21-|49" defer="">
+    </script>
+
+    <script>
+        function closeDesktopNav() {
+            var element = document.getElementById("app");
+            element.classList.toggle("app-sidebar-collapsed");
+        }
+
+        function closeMobileNav() {
+            var element = document.getElementById("app");
+            element.classList.toggle("app-sidebar-mobile-toggled");
+        }
+    </script>
+
 </body>
 
 </html>

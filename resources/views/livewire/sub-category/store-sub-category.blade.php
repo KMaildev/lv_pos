@@ -85,7 +85,7 @@
 
                         <div class="row mb-3">
                             <label for="inputEnterYourName" class="col-sm-3 col-form-label">
-                                Title
+                                Menu Name
                             </label>
                             <div class="col-sm-9">
                                 <input type="text" class="form-control text-black" wire:model="title" id="title">

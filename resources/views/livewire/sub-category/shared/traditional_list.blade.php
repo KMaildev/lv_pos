@@ -17,8 +17,7 @@
 
     <div class="col-md-8">
         @foreach ($traditionals as $traditional)
-            <button type="button" class="btn btn-secondary" data-bs-container="body" data-bs-toggle="popover"
-                data-bs-placement="top" data-bs-content="Top popover">
+            <button wire:click="searchTraditionals({{ $traditional->id }})" type="button" class="btn btn-secondary">
                 {{ $traditional->title ?? '' }}
             </button>
         @endforeach

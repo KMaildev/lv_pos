@@ -89,7 +89,7 @@
                         <i class="fas fa-chart-bar"></i>
                     </span>
                     <span class="menu-text text-white">
-                        Sub Category
+                        Menu
                     </span>
                 </a>
             </div>

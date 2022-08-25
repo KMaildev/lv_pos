@@ -5,7 +5,15 @@
                 Menu List
             </div>
         </div>
+
+
         <div class="pos-sidebar-body tab-content" data-scrollbar="true" data-height="100%">
+            <div class="d-grid gap-2" style="background-color: #24303E;">
+                <a href="{{ route('index_sub_category') }}" class="btn btn-lg"
+                    style="background-color: #24303E; color: white;">
+                    All
+                </a>
+            </div>
             <div class="tab-pane fade h-100 show active" id="newOrderTab">
                 @foreach ($categories as $categorie)
                     <div class="accordion" id="accordionExample">

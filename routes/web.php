@@ -7,6 +7,7 @@ use App\Http\Livewire\Ingredients\IndexIngredients;
 use App\Http\Livewire\Ingredients\StoreIngredients;
 use App\Http\Livewire\MainCategory\IndexMainCategory;
 use App\Http\Livewire\MainCategory\StoreMainCategory;
+use App\Http\Livewire\ManageIngredients\IndexManageIngredients;
 use App\Http\Livewire\SubCategory\IndexSubCategory;
 use App\Http\Livewire\SubCategory\StoreSubCategory;
 use App\Http\Livewire\Traditional\IndexTraditional;
@@ -33,6 +34,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/store-sub-category', StoreSubCategory::class)->name('store_sub_category');
     Route::get('/index-traditional', IndexTraditional::class)->name('index_traditional');
     Route::get('/store-traditional', StoreTraditional::class)->name('store_traditional');
+    Route::get('/index-manage-ingredients/{id}', array('as' => 'index_manage_ingredients', 'uses' => IndexManageIngredients::class));
 });
 
 require __DIR__ . '/auth.php';

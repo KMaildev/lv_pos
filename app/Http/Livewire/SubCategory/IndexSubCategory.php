@@ -13,8 +13,9 @@ class IndexSubCategory extends Component
     public $traditionals;
     public $sub_categories;
 
-    public $search;
-    public $main_categorie_id_search;
+    public $search = '';
+    public $main_categorie_id_search = '';
+    public $traditional_id = '';
 
 
     /**
@@ -31,9 +32,11 @@ class IndexSubCategory extends Component
 
     public function render()
     {
-        if (!is_null($this->search) || !is_null($this->main_categorie_id_search)) {
+        if ($this->search != '') {
             $this->sub_categories = SubCategory::where('title', 'like', '%' . $this->search . '%')
-                ->where('main_categorie_id', $this->main_categorie_id_search ?? '')
+                ->get();
+        } elseif ($this->main_categorie_id_search != '') {
+            $this->sub_categories = SubCategory::where('main_categorie_id', $this->main_categorie_id_search)
                 ->get();
         } else {
             $this->sub_categories =  SubCategory::where('title', 'like', '%' . $this->search . '%')->get();
@@ -41,8 +44,14 @@ class IndexSubCategory extends Component
         return view('livewire.sub-category.index-sub-category');
     }
 
+
     public function searchMainCategory($value)
     {
         $this->main_categorie_id_search = $value;
+    }
+
+    public function searchTraditionals($value)
+    {
+        $this->traditional_id = $value;
     }
 }

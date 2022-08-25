@@ -28394,11 +28394,11 @@ body .note-modal-backdrop {
 }
 
 .pos .pos-sidebar {
-    width: 360px;
+    width: 260px;
     height: 100%;
     display: flex;
     flex-direction: column;
-    flex: 0 0 360px
+    flex: 0 0 260px
 }
 
 @media (max-width:991.98px) {

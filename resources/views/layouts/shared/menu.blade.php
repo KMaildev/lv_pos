@@ -58,7 +58,7 @@
 
             <div class="menu-divider"></div>
             <div class="menu-header text-white">
-                Menu
+                Menu Configuration
             </div>
 
             <div class="menu-item">
@@ -73,7 +73,7 @@
             </div>
 
             <div class="menu-item">
-                <a href="{{ route('indexuser') }}" class="menu-link">
+                <a href="{{ route('index_main_category') }}" class="menu-link">
                     <span class="menu-icon">
                         <i class="fas fa-chart-bar"></i>
                     </span>
@@ -84,7 +84,7 @@
             </div>
 
             <div class="menu-item">
-                <a href="#" class="menu-link">
+                <a href="{{ route('index_sub_category') }}" class="menu-link">
                     <span class="menu-icon">
                         <i class="fas fa-chart-bar"></i>
                     </span>

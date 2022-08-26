@@ -11,7 +11,6 @@ class IndexWaiterTableList extends Component
     public $table_lists;
     public $searchTableNo;
     public $table_list_id;
-    public $guestsModalStatus = false;
 
     public function render()
     {
@@ -27,6 +26,5 @@ class IndexWaiterTableList extends Component
     public function openGuestsModal($id)
     {
         $this->table_list_id = $id;
-        $this->guestsModalStatus = true;
     }
 }

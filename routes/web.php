@@ -15,6 +15,7 @@ use App\Http\Livewire\Traditional\IndexTraditional;
 use App\Http\Livewire\Traditional\StoreTraditional;
 use App\Http\Livewire\User\IndexUser;
 use App\Http\Livewire\User\StoreUser;
+use App\Http\Livewire\WaiterMenu\IndexWaiterMenu;
 use App\Http\Livewire\WaiterTableList\IndexWaiterTableList;
 use Illuminate\Support\Facades\Route;
 
@@ -39,6 +40,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/index-manage-ingredients/{id}', array('as' => 'index_manage_ingredients', 'uses' => IndexManageIngredients::class));
     Route::get('/index-table-list', IndexTable::class)->name('index_table_list');
     Route::get('/index-waiter-table-list', IndexWaiterTableList::class)->name('index_waiter_table_list');
+    Route::get('/index-waiter-menu/{guest_number}', array('as' => 'index_waiter_menu', 'uses' => IndexWaiterMenu::class));
 });
 
 require __DIR__ . '/auth.php';

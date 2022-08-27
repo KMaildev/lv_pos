@@ -1,220 +1,291 @@
-<div>
-    <div id="header" class="app-header" style="background-color:#03184a;">
-        <div class="desktop-toggler">
-            <button type="button" class="menu-toggler" data-toggle-class="app-sidebar-collapsed"
-                data-dismiss-class="app-sidebar-toggled" data-toggle-target=".app" onclick="closeDesktopNav()">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-        </div>
-
-        <div class="mobile-toggler">
-            <button type="button" class="menu-toggler" data-toggle-class="app-sidebar-mobile-toggled"
-                data-toggle-target=".app" onclick="closeMobileNav()">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-        </div>
-
-        <div class="brand">
-            <a href="{{ route('dashboard') }}" class="brand-logo">
-                <span class="brand-img">
-                    <span class="brand-img-text" style="color:#ffb100;">
-                        L
-                    </span>
+<header class="main-header">
+    <div class="d-flex align-items-center logo-box justify-content-start">
+        <a href="#"
+            class="waves-effect waves-light nav-link d-none d-md-inline-block mx-10 push-btn bg-transparent hover-primary"
+            data-toggle="push-menu" role="button">
+            <i class="fa fa-bars">
+                <span class="path1"></span>
+                <span class="path2"></span>
+            </i>
+        </a>
+        <!-- Logo -->
+        <a href="index.html" class="logo">
+            <div class="logo-lg">
+                <span class="light-logo">
+                    <img src="{{ asset('assets/images/logo-dark-text.png') }}" alt="logo">
                 </span>
-                <span class="brand-text">
-                    LVA
+                <span class="dark-logo">
+                    <img src="{{ asset('assets/images/logo-light-text.png') }}" alt="logo">
                 </span>
-            </a>
-        </div>
-
-
-        <div class="menu">
-
-            <div class="menu-item dropdown">
-                <a href="#" data-toggle-class="app-header-menu-search-toggled" data-toggle-target=".app"
-                    class="menu-link">
-                    <div class="menu-icon">
-                        <i class="bi bi-search nav-icon"></i>
-                    </div>
-                </a>
             </div>
-
-            <div class="menu-item dropdown dropdown-mobile-full">
-                <a href="#" data-bs-toggle="dropdown" data-bs-display="static" class="menu-link">
-                    <div class="menu-icon">
-                        <i class="bi bi-grid-3x3-gap nav-icon"></i>
-                    </div>
-                </a>
-
-                <div class="dropdown-menu fade dropdown-menu-end w-300px text-center p-0 mt-1">
-
-                    <div class="row row-grid gx-0">
-                        <div class="col-4">
-                            <a href="email_inbox.html" class="dropdown-item text-decoration-none p-3 bg-none">
-                                <div class="position-relative">
-                                    <i
-                                        class="bi bi-circle-fill position-absolute text-theme top-0 mt-n2 me-n2 fs-6px d-block text-center w-100"></i>
-                                    <i class="bi bi-envelope h2 opacity-5 d-block my-1"></i>
-                                </div>
-                                <div class="fw-500 fs-10px text-white">INBOX</div>
-                            </a>
-                        </div>
-                        <div class="col-4">
-                            <a href="pos_customer_order.html" target="_blank"
-                                class="dropdown-item text-decoration-none p-3 bg-none">
-                                <div><i class="bi bi-hdd-network h2 opacity-5 d-block my-1"></i></div>
-                                <div class="fw-500 fs-10px text-white">POS SYSTEM</div>
-                            </a>
-                        </div>
-                        <div class="col-4">
-                            <a href="calendar.html" class="dropdown-item text-decoration-none p-3 bg-none">
-                                <div><i class="bi bi-calendar4 h2 opacity-5 d-block my-1"></i></div>
-                                <div class="fw-500 fs-10px text-white">CALENDAR</div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="row row-grid gx-0">
-                        <div class="col-4">
-                            <a href="helper.html" class="dropdown-item text-decoration-none p-3 bg-none">
-                                <div><i class="bi bi-terminal h2 opacity-5 d-block my-1"></i></div>
-                                <div class="fw-500 fs-10px text-white">HELPER</div>
-                            </a>
-                        </div>
-                        <div class="col-4">
-                            <a href="settings.html" class="dropdown-item text-decoration-none p-3 bg-none">
-                                <div class="position-relative">
-                                    <i
-                                        class="bi bi-circle-fill position-absolute text-theme top-0 mt-n2 me-n2 fs-6px d-block text-center w-100"></i>
-                                    <i class="bi bi-sliders h2 opacity-5 d-block my-1"></i>
-                                </div>
-                                <div class="fw-500 fs-10px text-white">SETTINGS</div>
-                            </a>
-                        </div>
-                        <div class="col-4">
-                            <a href="widgets.html" class="dropdown-item text-decoration-none p-3 bg-none">
-                                <div><i class="bi bi-collection-play h2 opacity-5 d-block my-1"></i></div>
-                                <div class="fw-500 fs-10px text-white">WIDGETS</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="menu-item dropdown dropdown-mobile-full">
-                <a href="#" data-bs-toggle="dropdown" data-bs-display="static" class="menu-link">
-                    <div class="menu-icon"><i class="bi bi-bell nav-icon"></i></div>
-                    <div class="menu-badge bg-theme"></div>
-                </a>
-                <div class="dropdown-menu dropdown-menu-end mt-1 w-300px fs-11px pt-1">
-                    <h6 class="dropdown-header fs-10px mb-1">NOTIFICATIONS</h6>
-                    <div class="dropdown-divider mt-1"></div>
-                    <a href="#" class="d-flex align-items-center py-10px dropdown-item text-wrap">
-                        <div class="fs-20px">
-                            <i class="bi bi-bag text-theme"></i>
-                        </div>
-                        <div class="flex-1 flex-wrap ps-3">
-                            <div class="mb-1 text-white">NEW ORDER RECEIVED ($1,299)</div>
-                            <div class="small">JUST NOW</div>
-                        </div>
-                        <div class="ps-2 fs-16px">
-                            <i class="bi bi-chevron-right"></i>
-                        </div>
-                    </a>
-                    <a href="#" class="d-flex align-items-center py-10px dropdown-item text-wrap">
-                        <div class="fs-20px w-20px">
-                            <i class="bi bi-person-circle text-theme"></i>
-                        </div>
-                        <div class="flex-1 flex-wrap ps-3">
-                            <div class="mb-1 text-white">3 NEW ACCOUNT CREATED</div>
-                            <div class="small">2 MINUTES AGO</div>
-                        </div>
-                        <div class="ps-2 fs-16px">
-                            <i class="bi bi-chevron-right"></i>
-                        </div>
-                    </a>
-                    <a href="#" class="d-flex align-items-center py-10px dropdown-item text-wrap">
-                        <div class="fs-20px w-20px">
-                            <i class="bi bi-gear text-theme"></i>
-                        </div>
-                        <div class="flex-1 flex-wrap ps-3">
-                            <div class="mb-1 text-white">SETUP COMPLETED</div>
-                            <div class="small">3 MINUTES AGO</div>
-                        </div>
-                        <div class="ps-2 fs-16px">
-                            <i class="bi bi-chevron-right"></i>
-                        </div>
-                    </a>
-                    <a href="#" class="d-flex align-items-center py-10px dropdown-item text-wrap">
-                        <div class="fs-20px w-20px">
-                            <i class="bi bi-grid text-theme"></i>
-                        </div>
-                        <div class="flex-1 flex-wrap ps-3">
-                            <div class="mb-1 text-white">WIDGET INSTALLATION DONE</div>
-                            <div class="small">5 MINUTES AGO</div>
-                        </div>
-                        <div class="ps-2 fs-16px">
-                            <i class="bi bi-chevron-right"></i>
-                        </div>
-                    </a>
-                    <a href="#" class="d-flex align-items-center py-10px dropdown-item text-wrap">
-                        <div class="fs-20px w-20px">
-                            <i class="bi bi-credit-card text-theme"></i>
-                        </div>
-                        <div class="flex-1 flex-wrap ps-3">
-                            <div class="mb-1 text-white">PAYMENT METHOD ENABLED</div>
-                            <div class="small">10 MINUTES AGO</div>
-                        </div>
-                        <div class="ps-2 fs-16px">
-                            <i class="bi bi-chevron-right"></i>
-                        </div>
-                    </a>
-                    <hr class="bg-white-transparent-5 mb-0 mt-2" />
-                    <div class="py-10px mb-n2 text-center">
-                        <a href="#" class="text-decoration-none fw-bold">SEE ALL</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="menu-item dropdown dropdown-mobile-full">
-                <a href="#" data-bs-toggle="dropdown" data-bs-display="static" class="menu-link">
-                    <div class="menu-img online">
-                        <img src="{{ asset('assets/img/user/profile.jpg') }}" alt="Profile" height="60" />
-                    </div>
-                    <div class="menu-text d-sm-block d-none">
-                        <span>
-                            Admin
-                        </span>
-                    </div>
-                </a>
-                <div class="dropdown-menu dropdown-menu-end me-lg-3 fs-11px mt-1">
-                    <a class="dropdown-item d-flex align-items-center" href="#">
-                        PROFILE
-                        <i class="bi bi-person-circle ms-auto text-theme fs-16px my-n1"></i>
-                    </a>
-                    <a class="dropdown-item d-flex align-items-center" href="#">
-                        SETTINGS
-                        <i class="bi bi-gear ms-auto text-theme fs-16px my-n1"></i>
-                    </a>
-                    <div class="dropdown-divider"></div>
-
-
-                    <form method="POST" action="{{ route('logout') }}">
-                        @csrf
-                        <a class="dropdown-item d-flex align-items-center" href="route('logout')"
-                            onclick="event.preventDefault();
-                            this.closest('form').submit();">
-                            {{ __('Log Out') }}
-                            <i class="bi bi-toggle-off ms-auto text-theme fs-16px my-n1"></i>
-                        </a>
-                    </form>
-
-                </div>
-            </div>
-        </div>
+        </a>
     </div>
-</div>
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top">
+        <div class="app-menu">
+            <ul class="header-megamenu nav">
+                <li class="btn-group nav-item d-md-none">
+                    <a href="#" class="waves-effect waves-light nav-link push-btn btn-info-light"
+                        data-toggle="push-menu" role="button">
+                        <i class="fa fa-bars">
+                            <span class="path1"></span>
+                            <span class="path2"></span>
+                            <span class="path3"></span>
+                        </i>
+                    </a>
+                </li>
+
+                <li class="btn-group nav-item d-none d-xl-inline-block">
+                    <div class="app-menu">
+                        <div class="search-bx mx-5">
+                            <form>
+                                <div class="input-group">
+                                    <input type="search" class="form-control" placeholder="Search" aria-label="Search"
+                                        aria-describedby="button-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn" type="submit" id="button-addon3"><i
+                                                class="ti-search"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="navbar-custom-menu r-side">
+            <ul class="nav navbar-nav">
+                <li class="btn-group nav-item d-lg-inline-flex d-none">
+                    <a href="#" data-provide="fullscreen"
+                        class="waves-effect waves-light nav-link full-screen btn-info-light" title="Full Screen">
+                        <i class="icon-Expand-arrows"><span class="path1"></span><span class="path2"></span></i>
+                    </a>
+                </li>
+                <!-- Notifications -->
+                <li class="dropdown notifications-menu">
+                    <span class="label label-primary">5</span>
+                    <a href="#" class="waves-effect waves-light dropdown-toggle btn-primary-light"
+                        data-bs-toggle="dropdown" title="Notifications">
+                        <i class="icon-Notifications">
+                            <span class="path1"></span>
+                            <span class="path2"></span>
+                        </i>
+                    </a>
+                    <ul class="dropdown-menu animated bounceIn">
+
+                        <li class="header">
+                            <div class="p-20">
+                                <div class="flexbox">
+                                    <div>
+                                        <h4 class="mb-0 mt-0">Notifications</h4>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="text-danger">Clear All</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li>
+                            <!-- inner menu: contains the actual data -->
+                            <ul class="menu sm-scrol">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-users text-info"></i> Curabitur id eros quis nunc
+                                        suscipit blandit.
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-warning text-warning"></i> Duis malesuada justo eu
+                                        sapien elementum, in semper diam posuere.
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-users text-danger"></i> Donec at nisi sit amet tortor
+                                        commodo porttitor pretium a erat.
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-shopping-cart text-success"></i> In gravida mauris et
+                                        nisi
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-user text-danger"></i> Praesent eu lacus in libero
+                                        dictum fermentum.
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-user text-primary"></i> Nunc fringilla lorem
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-user text-success"></i> Nullam euismod dolor ut quam
+                                        interdum, at scelerisque ipsum imperdiet.
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="footer">
+                            <a href="#">View all</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- Messages -->
+                <li class="dropdown messages-menu">
+                    <span class="label label-primary">5</span>
+                    <a href="#" class="dropdown-toggle btn-primary-light" data-bs-toggle="dropdown"
+                        title="Messages">
+                        <i class="icon-Incoming-mail"><span class="path1"></span><span class="path2"></span></i>
+                    </a>
+                    <ul class="dropdown-menu animated bounceIn">
+
+                        <li class="header">
+                            <div class="p-20">
+                                <div class="flexbox">
+                                    <div>
+                                        <h4 class="mb-0 mt-0">Messages</h4>
+                                    </div>
+                                    <div>
+                                        <a href="#" class="text-danger">Clear All</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <!-- inner menu: contains the actual data -->
+                            <ul class="menu sm-scrol">
+                                <li>
+                                    <!-- start message -->
+                                    <a href="#">
+                                        <div class="pull-left">
+                                            <img src="{{ asset('assets/images/user2-160x160.jpg') }}"
+                                                class="rounded-circle" alt="User Image">
+                                        </div>
+                                        <div class="mail-contnet">
+                                            <h4>
+                                                Lorem Ipsum
+                                                <small><i class="fa fa-clock-o"></i> 15 mins</small>
+                                            </h4>
+                                            <span>Lorem ipsum dolor sit amet, consectetur adipiscing
+                                                elit.</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <!-- end message -->
+                                <li>
+                                    <a href="#">
+                                        <div class="pull-left">
+                                            <img src="{{ asset('assets/images/user3-128x128.jpg') }}"
+                                                class="rounded-circle" alt="User Image">
+                                        </div>
+                                        <div class="mail-contnet">
+                                            <h4>
+                                                Nullam tempor
+                                                <small><i class="fa fa-clock-o"></i> 4 hours</small>
+                                            </h4>
+                                            <span>Curabitur facilisis erat quis metus congue viverra.</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="pull-left">
+                                            <img src="{{ asset('assets/images/user4-128x128.jpg') }}"
+                                                class="rounded-circle" alt="User Image">
+                                        </div>
+                                        <div class="mail-contnet">
+                                            <h4>
+                                                Proin venenatis
+                                                <small><i class="fa fa-clock-o"></i> Today</small>
+                                            </h4>
+                                            <span>Vestibulum nec ligula nec quam sodales rutrum sed
+                                                luctus.</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="pull-left">
+                                            <img src="{{ asset('assets/images/user3-128x128.jpg') }}"
+                                                class="rounded-circle" alt="User Image">
+                                        </div>
+                                        <div class="mail-contnet">
+                                            <h4>
+                                                Praesent suscipit
+                                                <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                                            </h4>
+                                            <span>Curabitur quis risus aliquet, luctus arcu nec, venenatis
+                                                neque.</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="pull-left">
+                                            <img src="{{ asset('assets/images/user4-128x128.jpg') }}"
+                                                class="rounded-circle" alt="User Image">
+                                        </div>
+                                        <div class="mail-contnet">
+                                            <h4>
+                                                Donec tempor
+                                                <small><i class="fa fa-clock-o"></i> 2 days</small>
+                                            </h4>
+                                            <span>Praesent vitae tellus eget nibh lacinia pretium.</span>
+                                        </div>
+
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="footer">
+                            <a href="#">See all e-Mails</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- User Account-->
+                <li class="dropdown user user-menu">
+                    <a href="#" class="dropdown-toggle p-0 text-dark hover-primary ms-md-30 ms-10"
+                        data-bs-toggle="dropdown" title="User">
+                        <span class="ps-30 d-md-inline-block d-none">
+                            Hello,
+                        </span>
+                        <strong class="d-md-inline-block d-none">Admin</strong>
+                        <img src="{{ asset('assets/images/avatar/avatar-11.png') }}"
+                            class="user-image rounded-circle avatar bg-white mx-10" alt="User Image">
+                    </a>
+                    <ul class="dropdown-menu animated flipInX">
+                        <li class="user-body">
+                            <a class="dropdown-item" href="#"><i class="ti-user text-muted me-2"></i>
+                                Profile</a>
+                            <a class="dropdown-item" href="#"><i class="ti-wallet text-muted me-2"></i>
+                                My Wallet</a>
+                            <a class="dropdown-item" href="#"><i class="ti-settings text-muted me-2"></i>
+                                Settings</a>
+                            <div class="dropdown-divider"></div>
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <a class="dropdown-item" href="route('logout')"
+                                    onclick="event.preventDefault();
+                                        this.closest('form').submit();">
+                                    <i class="ti-lock text-muted me-2"></i>
+                                    Logout
+                                </a>
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+</header>

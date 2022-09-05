@@ -1,16 +1,28 @@
 <aside class="main-sidebar">
-    <!-- sidebar-->
     <section class="sidebar position-relative">
         <div class="multinav">
             <div class="multinav-scroll" style="height: 100%;">
-                <!-- sidebar menu-->
-                {{-- data-widget="tree" --}}
                 <ul class="sidebar-menu">
 
                     <li class="treeview {{ request()->routeIs('dashboard') ? 'active menu-open' : '' }}">
                         <a href="{{ route('dashboard') }}">
                             <i class="icon-Home"></i>
                             <span>Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="header">
+                        POS
+                    </li>
+
+                    <li class="treeview {{ request()->routeIs('index_pos') ? 'active menu-open' : '' }}">
+                        <a href="{{ route('index_pos') }}">
+                            <i class="icon-Chart-line">
+                                <span class="path1"></span><span class="path2"></span>
+                            </i>
+                            <span>
+                                POS
+                            </span>
                         </a>
                     </li>
 

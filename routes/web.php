@@ -10,6 +10,7 @@ use App\Http\Livewire\Ingredients\StoreIngredients;
 use App\Http\Livewire\MainCategory\IndexMainCategory;
 use App\Http\Livewire\MainCategory\StoreMainCategory;
 use App\Http\Livewire\ManageIngredients\IndexManageIngredients;
+use App\Http\Livewire\Pos\IndexPos;
 use App\Http\Livewire\SubCategory\IndexSubCategory;
 use App\Http\Livewire\SubCategory\StoreSubCategory;
 use App\Http\Livewire\TableList\IndexTable;
@@ -47,6 +48,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/store-floor-list', StoreFloorList::class)->name('store_floor_list');
     Route::get('/index-waiter-table-list', IndexWaiterTableList::class)->name('index_waiter_table_list');
     Route::get('/index-waiter-menu/{guest_number}', array('as' => 'index_waiter_menu', 'uses' => IndexWaiterMenu::class));
+    Route::get('/index-pos', IndexPos::class)->name('index_pos');
+
 });
 
 require __DIR__ . '/auth.php';

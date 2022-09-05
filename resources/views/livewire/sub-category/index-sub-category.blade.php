@@ -1,4 +1,4 @@
-<section class="content">
+<section class="content" wire:ignore.self wire:key="index_sub_category">
     <div class="row">
         <div class="card">
             <div class="card-header">

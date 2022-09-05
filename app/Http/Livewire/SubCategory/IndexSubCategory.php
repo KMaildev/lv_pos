@@ -32,15 +32,22 @@ class IndexSubCategory extends Component
 
     public function render()
     {
+        // if ($this->search != '') {
+        //     $this->sub_categories = SubCategory::where('title', 'like', '%' . $this->search . '%')
+        //         ->get();
+        // } elseif ($this->main_categorie_id_search != '') {
+        //     $this->sub_categories = SubCategory::where('main_categorie_id', $this->main_categorie_id_search)
+        //         ->get();
+        // } else {
+        //     $this->sub_categories =  SubCategory::where('title', 'like', '%' . $this->search . '%')->get();
+        // }
+
         if ($this->search != '') {
-            $this->sub_categories = SubCategory::where('title', 'like', '%' . $this->search . '%')
-                ->get();
-        } elseif ($this->main_categorie_id_search != '') {
-            $this->sub_categories = SubCategory::where('main_categorie_id', $this->main_categorie_id_search)
-                ->get();
+            $this->sub_categories =  SubCategory::all();
         } else {
             $this->sub_categories =  SubCategory::where('title', 'like', '%' . $this->search . '%')->get();
         }
+
         return view('livewire.sub-category.index-sub-category');
     }
 

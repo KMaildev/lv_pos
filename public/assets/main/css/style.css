@@ -34581,6 +34581,8 @@ Height property
   }
 }
 
+
+/* margin-right: 361px; */
 .content-wrapper {
   min-height: 100%;
   background-color: #f3f2f7;
@@ -34590,7 +34592,7 @@ Height property
   transition: all 0.3s ease-in-out;
   overflow: hidden;
   border-radius: 0;
-  margin-right: 361px;
+  margin-right: 13px;
 }
 
 @media (max-width: 767px) {

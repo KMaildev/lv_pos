@@ -3,6 +3,8 @@
 use App\Http\Livewire\Category\IndexCategory;
 use App\Http\Livewire\Category\StoreCategory;
 use App\Http\Livewire\Dashboard;
+use App\Http\Livewire\FloorList\IndexFloorList;
+use App\Http\Livewire\FloorList\StoreFloorList;
 use App\Http\Livewire\Ingredients\IndexIngredients;
 use App\Http\Livewire\Ingredients\StoreIngredients;
 use App\Http\Livewire\MainCategory\IndexMainCategory;
@@ -11,6 +13,7 @@ use App\Http\Livewire\ManageIngredients\IndexManageIngredients;
 use App\Http\Livewire\SubCategory\IndexSubCategory;
 use App\Http\Livewire\SubCategory\StoreSubCategory;
 use App\Http\Livewire\TableList\IndexTable;
+use App\Http\Livewire\TableList\StoreTableList;
 use App\Http\Livewire\Traditional\IndexTraditional;
 use App\Http\Livewire\Traditional\StoreTraditional;
 use App\Http\Livewire\User\IndexUser;
@@ -39,6 +42,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/store-traditional', StoreTraditional::class)->name('store_traditional');
     Route::get('/index-manage-ingredients/{id}', array('as' => 'index_manage_ingredients', 'uses' => IndexManageIngredients::class));
     Route::get('/index-table-list', IndexTable::class)->name('index_table_list');
+    Route::get('/store-table-list', StoreTableList::class)->name('store_table_list');
+    Route::get('/index-floor-list', IndexFloorList::class)->name('index_floor_list');
+    Route::get('/store-floor-list', StoreFloorList::class)->name('store_floor_list');
     Route::get('/index-waiter-table-list', IndexWaiterTableList::class)->name('index_waiter_table_list');
     Route::get('/index-waiter-menu/{guest_number}', array('as' => 'index_waiter_menu', 'uses' => IndexWaiterMenu::class));
 });

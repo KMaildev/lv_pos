@@ -1,50 +1,85 @@
-<div wire:ignore.self wire:key="index_table_list">
+<section class="content" wire:ignore.self wire:key="index_ingred">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">
+                    Table list
+                </h4>
 
-    <div id="app" class="app app-content-full-height app-without-sidebar app-without-header">
-        <div class="pos pos-vertical card" id="pos">
-            <div class="pos-container card-body">
-                <div class="pos-header">
-                    <div class="logo">
-                        <a href="pos_counter_checkout.html">
-                            <div class="logo-img">
-                                <i class="bi bi-x-diamond" style="font-size: 1.5rem;"></i>
-                            </div>
-                            <div class="logo-text">Table</div>
-                        </a>
-                    </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <a href="{{ route('store_table_list') }}" class="waves-effect waves-light btn btn-info">
+                        <i class="fa fa-plus"></i>
+                        Create New
+                    </a>
                 </div>
+            </div>
 
-                <div class="pos-content">
-                    <div class="pos">
-                        <div class="pos-container">
-                            <div class="pos-content h-100">
-                                <div class="pos-content-container p-3" data-scrollbar="true" data-height="100%">
-                                    <div class="row gx-3">
-                                        @foreach ($table_lists as $table_list)
-                                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6 pb-3">
-                                                <div class="pos-checkout-table in-use card">
-                                                    <a class="pos-checkout-table-container" data-toggle="select-table">
-                                                        <div class="pos-checkout-table-header">
-                                                            <div class="status">
-                                                                <i class="bi bi-circle-fill"></i>
-                                                            </div>
-                                                            <div class="fw-bold">Table</div>
-                                                            <div class="fw-bold display-6">
-                                                                {{ $table_list->table_no ?? '' }}
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        @endforeach
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead class="bg-info">
+                        <tr>
+                            <th style="width: 1%;">
+                                #
+                            </th>
+                            <th style="width: 10%; text-align: center">
+                                Floor
+                            </th>
+                            <th style="width: 10%; text-align: center">
+                                Table name / No
+                            </th>
+                            <th style="width: 10%; text-align: center">
+                                Reservation
+                            </th>
+                            <th style="width: 10%; text-align: center">
+                                Table Icon
+                            </th>
+                            <th style="width: 10%; text-align: center">
+                                Actions
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($table_lists as $key => $table_list)
+                            <tr>
+                                <td style="text-align: center">
+                                    {{ $key + 1 }}
+                                </td>
+
+                                <td style="text-align: center">
+                                    {{ $table_list->floor_lists_table->title ?? '' }}
+                                </td>
+
+                                <td style="text-align: center">
+                                    {{ $table_list->table_no ?? '' }}
+                                </td>
+
+                                <td style="text-align: center">
+                                    {{ $table_list->reservation ?? '' }}
+                                </td>
+
+                                <td style="text-align: center">
+                                    @if ($table_list->table_icon)
+                                        <img src="{{ Storage::url($table_list->table_icon) }}" class="img-fluid w-p75"
+                                            style="width: 120px; height: 90px; background-size: center; object-fit: cover;" />
+                                    @endif
+                                </td>
+
+                                <td>
+                                    <a href="#" class="btn btn-info btn-sm">
+                                        <i class="fa fa-edit"></i>
+                                        Edit
+                                    </a>
+                                    <button wire:click="delete({{ $table_list->id }})"
+                                        class="btn btn-danger btn-sm">
+                                        <i class="fa fa-trash"></i>
+                                        Delete
+                                    </button>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
-
-</div>
+</section>

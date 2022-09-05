@@ -14,4 +14,9 @@ class IndexTable extends Component
         $this->table_lists = TableList::all();
         return view('livewire.table-list.index-table');
     }
+
+    public function delete($id)
+    {
+        TableList::find($id)->delete();
+    }
 }

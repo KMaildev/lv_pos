@@ -14,19 +14,31 @@
                         </a>
                     </li>
 
+                    <li class="header">
+                        Restaurant Configuration
+                    </li>
+
+                    <li class="treeview {{ request()->routeIs('index_floor_list') ? 'active menu-open' : '' }}">
+                        <a href="{{ route('index_floor_list') }}">
+                            <i class="icon-Clipboard-check">
+                                <span class="path1"></span><span class="path2"></span><span class="path3"></span>
+                            </i>
+                            <span>Floor List</span>
+                        </a>
+                    </li>
+
                     <li class="treeview {{ request()->routeIs('index_table_list') ? 'active menu-open' : '' }}">
                         <a href="{{ route('index_table_list') }}">
                             <i class="icon-Clipboard-check">
                                 <span class="path1"></span><span class="path2"></span><span class="path3"></span>
                             </i>
-                            <span>Table</span>
+                            <span>Table list</span>
                         </a>
                     </li>
 
                     <li class="header">
                         Menu Configuration
                     </li>
-
 
                     <li class="treeview {{ request()->routeIs('index_category') ? 'active menu-open' : '' }}">
                         <a href="{{ route('index_category') }}">

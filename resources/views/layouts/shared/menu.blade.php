@@ -4,7 +4,8 @@
         <div class="multinav">
             <div class="multinav-scroll" style="height: 100%;">
                 <!-- sidebar menu-->
-                <ul class="sidebar-menu" data-widget="tree">
+                {{-- data-widget="tree" --}}
+                <ul class="sidebar-menu">
 
                     <li class="treeview {{ request()->routeIs('dashboard') ? 'active menu-open' : '' }}">
                         <a href="{{ route('dashboard') }}">

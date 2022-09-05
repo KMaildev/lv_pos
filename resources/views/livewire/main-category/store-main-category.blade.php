@@ -4,7 +4,7 @@
             <div class="box">
                 <div class="box-header">
                     <h4 class="box-title">
-                        Main Category / Create
+                        Category / Create
                     </h4>
                 </div>
                 <div class="box-body">

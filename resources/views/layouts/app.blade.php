@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
     @livewireStyles
 </head>
 
@@ -48,6 +47,8 @@
 
     <!-- Vendor JS -->
     <script src="{{ asset('assets/main/js/vendors.min.js') }}"></script>
+    <script src="{{ asset('assets/assets/vendor_components/select2/dist/js/select2.full.js') }}"></script>
+
     {{-- <script src="{{ asset('assets/main/js/pages/chat-popup.js') }}"></script>
     <script src="{{ asset('assets/assets/icons/feather-icons/feather.min.js') }}"></script>
     <script src="{{ asset('assets/assets/vendor_components/OwlCarousel2/dist/owl.carousel.js') }}"></script>
@@ -59,7 +60,11 @@
     <!-- Riday Admin App -->
     <script src="{{ asset('assets/main/js/template.js') }}"></script>
     {{-- <script src="{{ asset('assets/main/js/pages/dashboard.js') }}"></script> --}}
-
+    <script>
+        $(document).ready(function() {
+            $('.select2').select2();
+        });
+    </script>
 </body>
 
 </html>

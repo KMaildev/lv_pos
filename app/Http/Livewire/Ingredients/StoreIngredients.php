@@ -33,7 +33,7 @@ class StoreIngredients extends Component
         'unit' => 'required',
     ];
 
-    public function storeUser()
+    public function storeIngredient()
     {
         $this->validate();
         $save = new Ingredients();

@@ -33,14 +33,14 @@
                             <i class="icon-Clipboard-check">
                                 <span class="path1"></span><span class="path2"></span><span class="path3"></span>
                             </i>
-                            <span>Category</span>
+                            <span>Main Category</span>
                         </a>
                     </li>
 
                     <li class="treeview {{ request()->routeIs('index_main_category') ? 'active menu-open' : '' }}">
                         <a href="{{ route('index_main_category') }}">
                             <i class="icon-Home"></i>
-                            <span>Main Category</span>
+                            <span>Category</span>
                         </a>
                     </li>
 
@@ -63,7 +63,8 @@
                     </li>
 
 
-                    <li class="treeview {{ request()->routeIs('index_traditional') ? 'active menu-open' : '' }}">
+                    <li class="treeview {{ request()->routeIs('index_traditional') ? 'active menu-open' : '' }}"
+                        hidden>
                         <a href="{{ route('index_traditional') }}">
                             <i class="icon-Clipboard-check">
                                 <span class="path1"></span><span class="path2"></span><span class="path3"></span>

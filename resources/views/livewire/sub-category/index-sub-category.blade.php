@@ -1,23 +1,35 @@
-<div class="content-header">
-    <div class="d-flex align-items-center">
-        <div class="me-auto">
-            <h4 class="page-title">Menu List</h4>
-            <div class="d-inline-block align-items-center">
-                <input type="text" class="form-control form-control-sm" placeholder="Search" wire:model="search">
-            </div>
-        </div>
-    </div>
-</div>
-
 <section class="content">
     <div class="row">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">
+                    Menu List
+                </h4>
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <a href="{{ route('store_sub_category') }}" class="waves-effect waves-light btn btn-info btn-sm">
+                        <i class="fa fa-plus"></i>
+                        Create New
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-xxxl-12 col-xl-12 col-lg-12 col-12">
+            <input type="text" class="form-control" placeholder="Search" wire:model="search">
+        </div>
+
         @foreach ($sub_categories as $sub_categorie)
             <div class="col-xxxl-3 col-xl-3 col-lg-6 col-12">
                 <div class="box food-box">
                     <div class="box-body text-center">
                         <div class="menu-item">
-                            <img src="{{ Storage::url($sub_categorie->photo) }}" class="img-fluid w-p75" alt=""
-                                style="width: 140px; height: 140px; background-size: center; object-fit: cover; border-radius: 50%;" />
+                            @if ($sub_categorie->photo)
+                                <img src="{{ Storage::url($sub_categorie->photo) }}" class="img-fluid w-p75"
+                                    style="width: 140px; height: 140px; background-size: center; object-fit: cover; border-radius: 50%; border: 1px solid rgb(215, 213, 213);" />
+                            @else
+                                <img src="{{ asset('data/noimage.png') }}" class="img-fluid w-p75"
+                                    style="width: 140px; height: 140px; background-size: center; object-fit: cover; border-radius: 50%; border: 1px solid rgb(215, 213, 213);" />
+                            @endif
                         </div>
 
                         <div class="menu-details text-center">

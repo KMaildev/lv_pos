@@ -1,93 +1,41 @@
-<div wire:ignore.self wire:key="store_category">
+<section class="content" wire:ignore.self wire:key="store_sub_category">
     <div class="row">
-        <div class="col-xl-12 mx-auto" style="background-color: white; color: black">
-            <form wire:submit.prevent="storeSubCategory" enctype="multipart/form-data">
-                <div class="card-body">
-                    <div class="border p-4 rounded">
-                        <div class="card-title d-flex align-items-center">
-                            <div><i class="bx bxs-user me-1 font-22 text-info"></i>
-                            </div>
-                            <h5 class="mb-0 text-info">
-                                Create
-                            </h5>
-                        </div>
-                        <hr />
-                        <br>
-
-                        <div class="row mb-3">
-                            <label for="inputEnterYourName" class="col-sm-3 col-form-label">
-                                Select Category
+        <div class="col-12">
+            <div class="box">
+                <div class="box-header">
+                    <h4 class="box-title">
+                        Menu / Create
+                    </h4>
+                </div>
+                <div class="box-body">
+                    <form wire:submit.prevent="storeSubCategory" enctype="multipart/form-data">
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-2">
+                                Category
                             </label>
-                            <div class="col-sm-9">
-                                <select class="form-control text-white bg-secondary"
-                                    wire:model.debounce.800ms="selectedCategory">
+                            <div class="col-md-10">
+                                <select class="form-control select2" wire:model.debounce.800ms="main_categorie_id">
                                     <option value="">
                                         Select Category
                                     </option>
-                                    @foreach ($categories as $category)
-                                        <option value="{{ $category->id ?? 0 }}">
-                                            {{ $category->title ?? '' }}
+                                    @foreach ($main_categories as $main_categorie)
+                                        <option value="{{ $main_categorie->id ?? 0 }}">
+                                            {{ $main_categorie->title ?? '' }}
                                         </option>
                                     @endforeach
                                 </select>
-                                @error('selectedCategory')
+                                @error('main_categorie_id')
                                     <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
                         </div>
 
 
-                        @if (!is_null($selectedCategory))
-                            <div class="row mb-3">
-                                <label for="inputEnterYourName" class="col-sm-3 col-form-label">
-                                    Main Category
-                                </label>
-                                <div class="col-sm-9">
-                                    <select class="form-control text-white bg-secondary"
-                                        wire:model.debounce.800ms="main_category_id" id="main_category_id">
-                                        <option value="">
-                                            Select Main Category
-                                        </option>
-                                        @foreach ($main_categories as $main_category)
-                                            <option value="{{ $main_category->id ?? 0 }}">
-                                                {{ $main_category->title ?? '' }}
-                                            </option>
-                                        @endforeach
-                                    </select>
-                                    @error('main_category_id')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
-                                </div>
-                            </div>
-                        @endif
-
-                        <div class="row mb-3">
-                            <label for="inputEnterYourName" class="col-sm-3 col-form-label">
-                                Traditional Food
-                            </label>
-                            <div class="col-sm-9">
-                                <select class="form-control text-white bg-secondary"
-                                    wire:model.debounce.800ms="traditional_id" id="traditional_id">
-                                    <option value="">
-                                        Select Traditional Food
-                                    </option>
-                                    @foreach ($traditionals as $traditional)
-                                        <option value="{{ $traditional->id ?? 0 }}">
-                                            {{ $traditional->title ?? '' }}
-                                        </option>
-                                    @endforeach
-                                </select>
-                                @error('traditional_id')
-                                    <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="inputEnterYourName" class="col-sm-3 col-form-label">
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-2">
                                 Menu Name
                             </label>
-                            <div class="col-sm-9">
+                            <div class="col-md-10">
                                 <input type="text" class="form-control text-black" wire:model="title" id="title">
                                 @error('title')
                                     <span class="text-danger">{{ $message }}</span>
@@ -95,11 +43,11 @@
                             </div>
                         </div>
 
-                        <div class="row mb-3">
-                            <label for="inputEnterYourName" class="col-sm-3 col-form-label">
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-2">
                                 Price
                             </label>
-                            <div class="col-sm-9">
+                            <div class="col-md-10">
                                 <input type="text" class="form-control text-black" wire:model="price" id="price">
                                 @error('price')
                                     <span class="text-danger">{{ $message }}</span>
@@ -107,11 +55,12 @@
                             </div>
                         </div>
 
-                        <div class="row mb-3">
-                            <label for="inputEnterYourName" class="col-sm-3 col-form-label">
+
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-2">
                                 Photo
                             </label>
-                            <div class="col-sm-9">
+                            <div class="col-md-10">
                                 <input type="file" class="form-control bg-secondary" wire:model="photo"
                                     id="photo">
                                 @error('photo')
@@ -120,18 +69,17 @@
                             </div>
                         </div>
 
-
-                        <div class="row">
-                            <label class="col-sm-3 col-form-label"></label>
-                            <div class="col-sm-9">
-                                <button type="submit" class="btn btn-info px-5">
+                        <div class="col-sm-12">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <button type="submit" class="waves-effect waves-light btn btn-info btn-sm">
+                                    <i class="fa fa-plus"></i>
                                     Save
                                 </button>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
-            </form>
+            </div>
         </div>
     </div>
-</div>
+</section>

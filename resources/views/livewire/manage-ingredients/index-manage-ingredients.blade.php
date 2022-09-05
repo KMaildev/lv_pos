@@ -1,18 +1,16 @@
-<div wire:ignore.self wire:key="index_manage_ingredients">
-    <div class="d-flex align-items-center mb-3">
-        <div>
-            <h1 class="page-header mb-0">
-                {{ $sub_categorie->title }}
-            </h1>
-        </div>
-    </div>
+<section class="content" wire:ignore.self wire:key="index_manage_ingredients">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">
+                    {{ $sub_categorie->title }}
+                </h4>
+            </div>
 
-    <div class="card-body">
-        <form>
             <div class="table-responsive">
-                <table class="table table-bordered table-hover">
-                    <thead>
-                        <tr style="background-color: #03184a;">
+                <table class="table table-bordered">
+                    <thead class="bg-info">
+                        <tr>
                             <th>
                                 No
                             </th>
@@ -47,8 +45,8 @@
                             <td></td>
 
                             <td>
-                                <select class="form-control text-white bg-secondary"
-                                    wire:change="changeEvent($event.target.value)" wire:model="ingredient_id">
+                                <select class="form-control" wire:change="changeEvent($event.target.value)"
+                                    wire:model="ingredient_id">
                                     <option value="">
                                         -- Ingredients --
                                     </option>
@@ -61,22 +59,20 @@
                             </td>
 
                             <td>
-                                <input style="height: 33px;" class="form-control text-white bg-secondary" type="text"
-                                    wire:model="unit" readonly>
+                                <input style="height: 33px;" class="form-control" type="text" wire:model="unit">
                             </td>
 
                             <td>
-                                <input style="height: 33px;" class="form-control text-white bg-secondary" type="text"
+                                <input style="height: 33px;" class="form-control" type="text"
                                     wire:model="number_of_unit">
                             </td>
 
                             <td>
-                                <input style="height: 33px;" class="form-control text-white bg-secondary" type="text"
-                                    wire:model="price">
+                                <input style="height: 33px;" class="form-control" type="text" wire:model="price">
                             </td>
 
                             <td colspan="2">
-                                <input class="btn btn-primary btn-sm form-control" type="submit" value="Save"
+                                <input class="btn btn-info btn-sm form-control" type="submit" value="Save"
                                     wire:click.prevent="storeManageIngredients()">
                             </td>
                         </tr>
@@ -120,14 +116,25 @@
                                 <td>
                                     <a wire:click="delete({{ $manage_ingredient->id }})" class="dropdown-item"
                                         href="javascript:void(0);" style="color: red">
-                                        Delete
+                                        Remove
                                     </a>
                                 </td>
                             </tr>
                         @endforeach
                     </tbody>
+                    <tr>
+                        <td colspan="5">
+                            Total
+                        </td>
+                        <td style="text-align: right">
+                            @php
+                                $TotalAll = array_sum($AllTotal);
+                                echo number_format($TotalAll, 2);
+                            @endphp
+                        </td>
+                    </tr>
                 </table>
             </div>
-        </form>
+        </div>
     </div>
-</div>
+</section>

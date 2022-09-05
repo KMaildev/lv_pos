@@ -3,7 +3,7 @@
         <div class="card">
             <div class="card-header">
                 <h4 class="card-title">
-                    Main Category
+                    Category
                 </h4>
 
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
